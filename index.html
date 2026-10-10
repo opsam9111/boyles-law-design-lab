@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An accessible interactive Cool Resource applying TPACK, SAMR, and UDL to a middle-school Boyle's law lesson.">
+  <title>Boyle's Law Design Lab | One Lesson Through Three Frameworks</title>
+  <link rel="icon" href="assets/boyles-law-icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Boyle's Law Design Lab home">
+      <img src="assets/boyles-law-icon.svg" alt="" width="46" height="46">
+      <span>Boyle's Law Design Lab</span>
+    </a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" aria-label="Main navigation">
+      <a href="#explore">Explore</a>
+      <a href="#frameworks">Three lenses</a>
+      <a href="#compare">Compare</a>
+      <a href="#challenge">Challenge</a>
+      <a href="#lesson">Lesson</a>
+      <a href="#evidence">Evidence</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">A middle-school instructional design studio</p>
+        <h1 id="hero-title">One science lesson.<br><span>Three design lenses.</span></h1>
+        <p class="hero-lead">Explore Boyle's law, then see how TPACK, SAMR, and Universal Design for Learning shape different—but connected—design decisions.</p>
+        <div class="button-row">
+          <a class="button primary" href="#explore">Start the investigation</a>
+          <a class="button secondary" href="#compare">Compare the frameworks</a>
+        </div>
+        <ul class="hero-facts" aria-label="Resource highlights">
+          <li>Interactive model</li>
+          <li>Accessible choices</li>
+          <li>Evidence-informed design</li>
+        </ul>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="orbit orbit-one">TPACK</div>
+        <div class="orbit orbit-two">SAMR</div>
+        <div class="orbit orbit-three">UDL</div>
+        <img src="assets/boyles-law-icon.svg" alt="" width="190" height="190">
+      </div>
+    </section>
+
+    <section class="section problem-section" aria-labelledby="problem-title">
+      <div class="section-heading compact">
+        <p class="eyebrow">The learning challenge</p>
+        <h2 id="problem-title">How can students understand something they cannot see?</h2>
+      </div>
+      <div class="problem-grid">
+        <article class="problem-card misconception">
+          <span class="card-number">01</span>
+          <h3>The misconception</h3>
+          <p>Students may memorize <span class="math">P₁V₁ = P₂V₂</span> without understanding why pressure rises when a gas is compressed.</p>
+        </article>
+        <article class="problem-card goal">
+          <span class="card-number">02</span>
+          <h3>The learning goal</h3>
+          <p>Manipulate volume, observe pressure, identify the inverse relationship, and explain the pattern using particle collisions.</p>
+        </article>
+        <article class="problem-card context">
+          <span class="card-number">03</span>
+          <h3>The context</h3>
+          <p>Beginning physics students learn face to face through prediction, a needle-free syringe demonstration, digital exploration, and explanation.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section simulation-section" id="explore" aria-labelledby="sim-title">
+      <div class="section-heading">
+        <p class="eyebrow">Explore the phenomenon</p>
+        <h2 id="sim-title">Compress the gas. Watch the relationship change.</h2>
+        <p>Move the volume control while the amount of gas and temperature remain constant. The model uses a simplified relationship, <span class="math">P = 100 ÷ V</span>, to make the inverse pattern visible.</p>
+      </div>
+
+      <div class="simulation-layout">
+        <div class="sim-panel">
+          <div class="sim-toolbar" aria-label="Simulation accessibility controls">
+            <button id="motion-toggle" class="small-button" type="button" aria-pressed="false">Pause particle motion</button>
+            <button id="speak-button" class="small-button" type="button">Hear the current result</button>
+          </div>
+
+          <div class="chamber-wrap">
+            <div class="pressure-gauge" aria-hidden="true">
+              <span>Pressure</span>
+              <strong id="gauge-value">1.00</strong>
+              <small>atm</small>
+            </div>
+            <div id="gas-chamber" class="gas-chamber" aria-hidden="true">
+              <div class="piston"></div>
+              <div id="particles" class="particles"></div>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label for="volume-slider">Volume: <output id="volume-output" for="volume-slider">100</output> units</label>
+            <input id="volume-slider" type="range" min="25" max="100" value="100" step="5">
+            <div class="range-labels" aria-hidden="true"><span>Compressed</span><span>Expanded</span></div>
+          </div>
+
+          <div class="data-strip" aria-label="Current simulation values">
+            <div><span>Volume</span><strong id="volume-readout">100 units</strong></div>
+            <div><span>Pressure</span><strong id="pressure-readout">1.00 atm</strong></div>
+            <div><span>P × V</span><strong id="constant-readout">100</strong></div>
+          </div>
+          <p id="sim-description" class="live-description" aria-live="polite">The gas occupies the full container. At 100 volume units, the pressure is 1.00 atmosphere.</p>
+        </div>
+
+        <aside class="inquiry-panel" aria-labelledby="inquiry-title">
+          <p class="eyebrow">Predict · Test · Explain</p>
+          <h3 id="inquiry-title">What do you notice?</h3>
+          <ol class="inquiry-steps">
+            <li><strong>Predict:</strong> What will happen to pressure if the volume is cut in half?</li>
+            <li><strong>Test:</strong> Move the slider to 50 volume units.</li>
+            <li><strong>Explain:</strong> Connect the change to particle-wall collisions.</li>
+          </ol>
+          <details>
+            <summary>Reveal a sentence frame</summary>
+            <p>When volume decreased from ______ to ______, pressure ______ because the particles had ______ space and collided with the walls ______ frequently.</p>
+          </details>
+          <div class="concept-callout">
+            <strong>Boyle's law</strong>
+            <p>For a fixed amount of gas at constant temperature, pressure and volume vary inversely.</p>
+            <p class="formula">P₁V₁ = P₂V₂</p>
+          </div>
+          <p class="external-note">For a fuller particle investigation, open PhET's free <a href="https://phet.colorado.edu/en/simulations/gases-intro" target="_blank" rel="noopener">Gases Intro simulation<span class="sr-only"> (opens in a new tab)</span></a>.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section frameworks-section" id="frameworks" aria-labelledby="framework-title">
+      <div class="section-heading">
+        <p class="eyebrow">The three design lenses</p>
+        <h2 id="framework-title">Each framework asks a different question.</h2>
+        <p>Together, the frameworks help the designer move from choosing technology to designing a coherent and accessible learning experience.</p>
+      </div>
+
+      <div class="framework-grid">
+        <article class="framework-card tpack-card">
+          <div class="framework-icon" aria-hidden="true">T</div>
+          <p class="framework-question">Does everything fit?</p>
+          <h3>TPACK</h3>
+          <p>TPACK focuses on the interaction of content knowledge, pedagogical knowledge, and technological knowledge within a particular teaching context.</p>
+          <ul>
+            <li><strong>Content:</strong> Boyle's inverse pressure–volume relationship.</li>
+            <li><strong>Pedagogy:</strong> Predict, investigate, discuss, graph, and explain.</li>
+            <li><strong>Technology:</strong> A dynamic model that exposes invisible particle behavior and generates data.</li>
+          </ul>
+          <p class="decision"><strong>Design decision:</strong> Use the simulation because its affordances support inquiry into this specific concept—not simply because it is digital.</p>
+          <p class="citation">(Koehler &amp; Mishra, 2009; Koehler et al., 2014)</p>
+        </article>
+
+        <article class="framework-card samr-card">
+          <div class="framework-icon" aria-hidden="true">S</div>
+          <p class="framework-question">What changes through technology?</p>
+          <h3>SAMR</h3>
+          <p>SAMR describes technology use as substitution, augmentation, modification, or redefinition. It can prompt reflection on how a task changes.</p>
+          <ol class="samr-list">
+            <li><span>S</span> Digital questions replace a paper worksheet.</li>
+            <li><span>A</span> Immediate feedback and audio add functional improvement.</li>
+            <li><span>M</span> Students manipulate volume, collect live data, and revise explanations.</li>
+            <li><span>R</span> Students publish accessible multimedia explanations for an authentic audience.</li>
+          </ol>
+          <p class="decision"><strong>Design decision:</strong> Use the level that serves the learning goal. “Higher” technology use is not automatically better.</p>
+          <p class="citation">(Hamilton et al., 2016)</p>
+        </article>
+
+        <article class="framework-card udl-card">
+          <div class="framework-icon" aria-hidden="true">U</div>
+          <p class="framework-question">Who might be excluded?</p>
+          <h3>UDL</h3>
+          <p>UDL anticipates learner variability and reduces barriers through multiple means of engagement, representation, and action and expression.</p>
+          <ul>
+            <li><strong>Engagement:</strong> Prediction, choice, relevance, collaboration, and manageable challenge.</li>
+            <li><strong>Representation:</strong> Physical model, animation, numbers, formula, text, audio, and graph.</li>
+            <li><strong>Action and expression:</strong> Written, visual, oral, audio, or video explanation.</li>
+          </ul>
+          <p class="decision"><strong>Design decision:</strong> Combine the simulation with descriptions, transcripts, sentence frames, tactile experience, and response choices.</p>
+          <p class="citation">(CAST, 2024; Michela, n.d.)</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section comparison-section" id="compare" aria-labelledby="compare-title">
+      <div class="section-heading">
+        <p class="eyebrow">Same scenario, different guidance</p>
+        <h2 id="compare-title">Compare the decisions—not just the definitions.</h2>
+      </div>
+      <div class="table-scroll" role="region" aria-label="Framework comparison table" tabindex="0">
+        <table>
+          <caption>How TPACK, SAMR, and UDL guide decisions in the Boyle's law lesson</caption>
+          <thead>
+            <tr>
+              <th scope="col">Design decision</th>
+              <th scope="col">TPACK lens</th>
+              <th scope="col">SAMR lens</th>
+              <th scope="col">UDL lens</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Why use a simulation?</th>
+              <td>Its dynamic particle model represents the science content and supports guided inquiry.</td>
+              <td>It modifies the task by allowing repeated manipulation, observation, and data collection.</td>
+              <td>It adds a visual and numerical representation, but alternative descriptions are still needed.</td>
+            </tr>
+            <tr>
+              <th scope="row">How should students participate?</th>
+              <td>Pair investigation supports the selected collaborative pedagogy.</td>
+              <td>Shared data and revision meaningfully change the original individual worksheet task.</td>
+              <td>Roles, choices, sentence frames, and individual think time reduce participation barriers.</td>
+            </tr>
+            <tr>
+              <th scope="row">How should learning be assessed?</th>
+              <td>The assessment must reveal conceptual and mathematical understanding of Boyle's law.</td>
+              <td>Technology can support rapid feedback and multimedia production, but novelty is not the goal.</td>
+              <td>Students may explain through equivalent written, visual, oral, audio, or video formats.</td>
+            </tr>
+            <tr>
+              <th scope="row">What if technology fails?</th>
+              <td>Return to the syringe, particle cards, and teacher-guided data because pedagogy and content remain central.</td>
+              <td>A non-digital task can still achieve the goal; a lower SAMR level is not automatically inferior.</td>
+              <td>Offer printed, tactile, verbal, and partner-supported routes to the same learning goal.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="synthesis-box">
+        <h3>Comparative insight</h3>
+        <p><strong>TPACK</strong> evaluates coherence among what is taught, how it is taught, and the tool used. <strong>SAMR</strong> makes the degree of task change visible. <strong>UDL</strong> asks whether every learner can access, participate in, and express learning within that redesigned task. The frameworks are complementary, not interchangeable.</p>
+      </div>
+    </section>
+
+    <section class="section challenge-section" id="challenge" aria-labelledby="challenge-title">
+      <div class="section-heading">
+        <p class="eyebrow">Try the three lenses</p>
+        <h2 id="challenge-title">Which framework most directly guides the decision?</h2>
+        <p>Select the strongest answer. More than one framework may contribute, but one is the clearest starting lens.</p>
+      </div>
+      <form id="framework-quiz" class="quiz" novalidate>
+        <fieldset class="quiz-card" data-answer="udl">
+          <legend><span>1</span> A student cannot depend on animation alone to understand particle collisions. The teacher adds narration, a tactile syringe, and a text description. Which framework most directly guides this decision?</legend>
+          <label><input type="radio" name="q1" value="tpack"> TPACK</label>
+          <label><input type="radio" name="q1" value="samr"> SAMR</label>
+          <label><input type="radio" name="q1" value="udl"> UDL</label>
+          <p class="feedback" aria-live="polite"></p>
+        </fieldset>
+        <fieldset class="quiz-card" data-answer="tpack">
+          <legend><span>2</span> The teacher checks whether a particle simulation accurately represents Boyle's law and supports guided inquiry. Which framework most directly guides this fit?</legend>
+          <label><input type="radio" name="q2" value="tpack"> TPACK</label>
+          <label><input type="radio" name="q2" value="samr"> SAMR</label>
+          <label><input type="radio" name="q2" value="udl"> UDL</label>
+          <p class="feedback" aria-live="polite"></p>
+        </fieldset>
+        <fieldset class="quiz-card" data-answer="samr">
+          <legend><span>3</span> The teacher compares a digital worksheet with an activity in which students manipulate variables and revise explanations using live evidence. Which framework most directly highlights this task change?</legend>
+          <label><input type="radio" name="q3" value="tpack"> TPACK</label>
+          <label><input type="radio" name="q3" value="samr"> SAMR</label>
+          <label><input type="radio" name="q3" value="udl"> UDL</label>
+          <p class="feedback" aria-live="polite"></p>
+        </fieldset>
+        <div class="quiz-actions">
+          <button class="button primary" type="submit">Check my thinking</button>
+          <button class="button secondary" type="reset">Try again</button>
+          <p id="quiz-summary" class="quiz-summary" aria-live="polite"></p>
+        </div>
+      </form>
+    </section>
+
+    <section class="section lesson-section" id="lesson" aria-labelledby="lesson-title">
+      <div class="section-heading">
+        <p class="eyebrow">Accessible lesson blueprint</p>
+        <h2 id="lesson-title">From curiosity to evidence-based explanation</h2>
+      </div>
+      <ol class="lesson-flow">
+        <li>
+          <span class="phase">Engage</span>
+          <h3>Predict with a syringe</h3>
+          <p>Students predict what happens to trapped air as a sealed, needle-free syringe is compressed.</p>
+          <small>Choice: speak, write, or draw the prediction.</small>
+        </li>
+        <li>
+          <span class="phase">Explore</span>
+          <h3>Manipulate the model</h3>
+          <p>Pairs change volume, observe pressure, and record at least four trials while other variables remain constant.</p>
+          <small>Roles: operator, recorder, narrator, and evidence checker.</small>
+        </li>
+        <li>
+          <span class="phase">Explain</span>
+          <h3>Connect particles to pattern</h3>
+          <p>Students graph the results and explain why collision frequency changes as available space changes.</p>
+          <small>Support: vocabulary bank, worked example, and sentence frames.</small>
+        </li>
+        <li>
+          <span class="phase">Apply</span>
+          <h3>Transfer to real life</h3>
+          <p>Students apply the relationship to a bicycle pump, breathing, tire inflation, or another selected context.</p>
+          <small>Choice supports interest and transfer.</small>
+        </li>
+        <li>
+          <span class="phase">Demonstrate</span>
+          <h3>Show understanding</h3>
+          <p>Students submit an equivalent written, diagrammed, oral, audio, or captioned-video explanation.</p>
+          <small>One goal; multiple valid forms of expression.</small>
+        </li>
+      </ol>
+      <div class="assessment-box">
+        <h3>Common success criteria</h3>
+        <ul class="check-list">
+          <li>Accurately identifies the inverse pressure–volume relationship.</li>
+          <li>Uses evidence from recorded values or the graph.</li>
+          <li>Explains the pattern through particle-wall collisions.</li>
+          <li>Applies the relationship to a new situation.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section evidence-section" id="evidence" aria-labelledby="evidence-title">
+      <div class="section-heading">
+        <p class="eyebrow">Evidence, access, and reuse</p>
+        <h2 id="evidence-title">Designed transparently</h2>
+      </div>
+      <div class="evidence-grid">
+        <article>
+          <h3>Accessibility statement</h3>
+          <p>This resource uses semantic headings, keyboard-operable controls, high-contrast text, visible focus indicators, live text updates, reduced-motion support, responsive layouts, and optional speech. The same core relationship is communicated through movement, numbers, words, and a formula.</p>
+          <p>The external PhET experience may present additional accessibility considerations. Teachers should test it with the technologies used by their learners and retain the tactile, verbal, numerical, and printed alternatives in the lesson.</p>
+        </article>
+        <article>
+          <h3>Design limitation</h3>
+          <p>The on-page model is intentionally simplified. It illustrates an inverse mathematical relationship rather than reproducing a full molecular simulation. It should support—not replace—teacher explanation, physical investigation, and scientific discussion.</p>
+        </article>
+        <article>
+          <h3>Reuse</h3>
+          <p>Educational text and original graphics are licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0<span class="sr-only"> (opens in a new tab)</span></a>. Website code is available under the MIT License. See the included LICENSE file.</p>
+        </article>
+      </div>
+
+      <div class="references">
+        <h3>References</h3>
+        <ul>
+          <li>CAST. (2024). <em>CAST Universal Design for Learning Guidelines version 3.0</em>. https://udlguidelines.cast.org</li>
+          <li>Hamilton, E. R., Rosenberg, J. M., &amp; Akcaoglu, M. (2016). The substitution augmentation modification redefinition (SAMR) model: A critical review and suggestions for its use. <em>TechTrends, 60</em>(5), 433–441. https://doi.org/10.1007/s11528-016-0091-y</li>
+          <li>Koehler, M. J., &amp; Mishra, P. (2009). What is technological pedagogical content knowledge? <em>Contemporary Issues in Technology and Teacher Education, 9</em>(1), 60–70.</li>
+          <li>Koehler, M. J., Mishra, P., Kereluik, K., Shin, T. S., &amp; Graham, C. R. (2014). The technological pedagogical content knowledge framework. In J. M. Spector, M. D. Merrill, J. Elen, &amp; M. J. Bishop (Eds.), <em>Handbook of research on educational communications and technology</em> (pp. 101–111). Springer. https://doi.org/10.1007/978-1-4614-3185-5_9</li>
+          <li>Michela, E. (n.d.). Universal design for learning. In A. Ottenbreit-Leftwich &amp; R. Kimmons (Eds.), <em>The K–12 educational technology handbook</em>. EdTech Books. https://edtechbooks.org/k12handbook/universal_design_for_learning</li>
+          <li>PhET Interactive Simulations. (n.d.). <em>Gases Intro</em>. University of Colorado Boulder. https://phet.colorado.edu/en/simulations/gases-intro</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <img src="assets/boyles-law-icon.svg" alt="" width="42" height="42">
+    <div>
+      <strong>Boyle's Law Design Lab</strong>
+      <p>Designed by Samuel Olowolafe (OPSAM) for AIL 601 · 2026</p>
+    </div>
+    <a href="#top">Back to top</a>
+  </footer>
+</body>
+</html>

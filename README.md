@@ -44,14 +44,6 @@ The language selector translates core learner prompts and controls; it is not re
 
 The optional external PhET simulation should be tested with the assistive technologies used by the intended learners. The lesson retains tactile, verbal, numerical, and printed alternatives.
 
-## Attribution and licenses
-
-- Original educational text and graphics: Creative Commons Attribution 4.0 International (CC BY 4.0).
-- Website source code: MIT License.
-- PhET is linked as an external extension and is not redistributed in this repository.
-
-See `LICENSE` for full terms.
-
 ## Author
 
 Samuel Olowolafe (OPSAM), 2026.

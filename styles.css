@@ -281,7 +281,7 @@ tbody th { color: var(--navy); background: #f3f7f9; }
 .secondary-link { color:var(--navy); background:white; border-color:var(--navy); margin-top:.7rem; }
 
 .evidence-section { background: var(--cream); }
-.evidence-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
 .evidence-grid article { padding: 1.4rem; background: white; border-radius: 15px; box-shadow: 0 8px 22px rgba(8,44,76,.08); }
 .evidence-grid h3, .references h3 { color: var(--navy); }
 .references { margin-top: 2rem; padding: 1.5rem; background: white; border-radius: 15px; }

@@ -6,6 +6,10 @@
 
 - An interactive pressure–volume model
 - Optional spoken description and pausable particle motion
+- A captioned, optionally narrated Boyle's law micro-lesson
+- English, Spanish, French, and Yoruba core-prompt options
+- Larger-text and high-contrast display controls
+- Written, visual, and local audio-recording response choices
 - A realistic middle-school instructional scenario
 - Applied explanations of TPACK, SAMR, and UDL
 - A same-scenario framework comparison matrix
@@ -34,7 +38,9 @@ The resource is build-free. Open `index.html` directly in a current browser, or 
 
 ## Accessibility notes
 
-The site includes semantic HTML, keyboard-operable controls, visible focus indicators, high contrast, responsive layouts, an ARIA live description of changing simulation values, reduced-motion support, and optional browser speech synthesis. The core relationship is communicated through movement, numerical values, text, and a formula.
+The site includes semantic HTML, keyboard-operable controls, visible focus indicators, adjustable text size, a high-contrast mode, responsive layouts, an ARIA live description of changing simulation values, reduced-motion support, optional browser speech synthesis, visible captions, a transcript, and multiple response formats. The core relationship is communicated through movement, numerical values, text, audio, and a formula.
+
+The language selector translates core learner prompts and controls; it is not represented as a complete professional translation of every scholarly section. Translations should be reviewed by fluent speakers before formal classroom adoption.
 
 The optional external PhET simulation should be tested with the assistive technologies used by the intended learners. The lesson retains tactile, verbal, numerical, and printed alternatives.
 

@@ -40,7 +40,7 @@ The resource is build-free. Open `index.html` directly in a current browser, or 
 
 The site includes semantic HTML, keyboard-operable controls, visible focus indicators, adjustable text size, a high-contrast mode, responsive layouts, an ARIA live description of changing simulation values, reduced-motion support, optional browser speech synthesis, visible captions, a transcript, and multiple response formats. The core relationship is communicated through movement, numerical values, text, audio, and a formula.
 
-The language selector translates core learner prompts and controls; it is not represented as a complete professional translation of every scholarly section. Translations should be reviewed by fluent speakers before formal classroom adoption.
+The language selector changes the complete learner-facing page—including navigation, instructions, simulation descriptions, framework explanations, feedback, captions, and speech-synthesis language—between English, Spanish, French, and Yoruba. Framework acronyms, equations, author names, and URLs remain unchanged for accuracy. Translation requires an internet connection, translations should be reviewed by fluent speakers before formal classroom adoption, and spoken output depends on the voices available in the learner's browser.
 
 The optional external PhET simulation should be tested with the assistive technologies used by the intended learners. The lesson retains tactile, verbal, numerical, and printed alternatives.
 

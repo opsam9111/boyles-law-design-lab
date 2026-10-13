@@ -268,6 +268,21 @@ tbody th { color: var(--navy); background: #f3f7f9; }
 .check-list { list-style: none; padding: 0; }
 .check-list li { margin: .6rem 0; }
 .check-list li::before { content: "✓"; margin-right: .6rem; color: var(--green); font-weight: 900; }
+.sample-evidence { max-width: 1080px; margin: 1.5rem auto 0; padding: clamp(1.3rem, 3vw, 2rem); color: var(--ink); background: white; border-radius: 18px; box-shadow: 0 15px 38px rgba(0,0,0,.18); }
+.sample-heading h3 { margin: .2rem 0 .5rem; color: var(--navy); font-size: clamp(1.35rem, 2.4vw, 1.8rem); }
+.sample-heading .eyebrow { color: #875a00; }
+.sample-evidence blockquote { margin: 1.3rem 0; padding: 1.2rem 1.4rem; background: #eef8f2; border-left: 6px solid var(--green); border-radius: 10px; font-size: 1.03rem; line-height: 1.7; }
+.score-table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; }
+.score-table { min-width: 720px; }
+.score-table caption { color: var(--navy); background: #edf5f8; }
+.score-table tbody th { width: 25%; }
+.score-table td:last-child { width: 82px; text-align: center; }
+.met-badge { display: inline-block; padding: .25rem .55rem; color: #073d25; background: #c9f1d9; border: 1px solid #31845a; border-radius: 999px; font-weight: 900; }
+.equivalent-formats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.2rem; }
+.equivalent-formats article { padding: 1rem; background: #f3eef9; border-top: 5px solid var(--purple); border-radius: 11px; }
+.equivalent-formats h4 { margin: 0 0 .4rem; color: var(--navy); font-size: 1.05rem; }
+.equivalent-formats p { margin: 0; }
+.equivalence-note { margin-bottom: 0; padding: .85rem 1rem; background: #fff6dd; border-radius: 9px; }
 
 .response-section { background:#eef5f8; }
 .response-tabs, .response-workspace { max-width:980px; margin:auto; }
@@ -324,6 +339,7 @@ footer a { margin-left: auto; color: white; font-weight: 800; }
   .data-strip { grid-template-columns: 1fr; }
   .data-strip div + div { border-left: 0; border-top: 1px solid var(--line); }
   .lesson-flow { grid-template-columns: 1fr; }
+  .equivalent-formats { grid-template-columns: 1fr; }
   footer { align-items: flex-start; flex-wrap: wrap; }
   footer a { margin-left: 0; width: 100%; }
 }

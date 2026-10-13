@@ -15,6 +15,7 @@
 - A same-scenario framework comparison matrix
 - A three-question framework decision challenge
 - An accessible five-phase lesson blueprint
+- A scored sample student explanation showing equivalent evidence across written, visual, and audio responses
 - APA-style in-text citations and references
 - An accessibility statement and transparent design limitation
 
